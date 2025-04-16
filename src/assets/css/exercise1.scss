@@ -1,0 +1,102 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section */
+.hero {
+  height: 650px;
+  
+  &__title {
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  &__subtitle {
+    animation: fadeInUp 1s ease-out 0.3s;
+    animation-fill-mode: both;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 1rem;
+  border-width: 1px;
+  border-color: rgb(229, 231, 235);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  &__content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  &__text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__button-container {
+    text-align: center;
+  }
+  
+  &__button {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem 1.5rem;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    &:hover {
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  /* Hero section */
+  .hero {
+    height: 600px;
+  }
+} 

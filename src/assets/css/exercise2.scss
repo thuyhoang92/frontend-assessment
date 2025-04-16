@@ -1,0 +1,222 @@
+.exercise2 {
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease-out;
+  }
+}
+
+// Tabs (Desktop)
+.tabs {
+  margin-bottom: 2rem;
+  animation: slideInUp 0.5s ease-out;
+  
+  &__header {
+    display: flex;
+    background-color: #f5f5f5;
+  }
+  
+  &__item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #4a90e2;
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    &:hover {
+      background-color: #e9e9e9;
+      
+      &::after {
+        transform: translateX(-70%);
+      }
+    }
+    
+    &--active {
+      background-color: white;
+      font-weight: 600;
+      
+      &::after {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  &__content {
+    background-color: white;
+    min-height: 200px;
+  }
+  
+  &__panel {
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: forwards;
+    
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeInDown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+}
+
+// Accordion (Mobile)
+.accordion {
+  margin-bottom: 2rem;
+  animation: slideInUp 0.5s ease-out;
+  
+  &__header {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    &--active {
+      background-color: #4a90e2;
+      color: white;
+    }
+  }
+  
+  &__icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    
+    .accordion__header--active & {
+      transform: rotate(90deg);
+    }
+  }
+  
+  &__content {
+    background-color: white;
+    padding: 1rem;
+    border-top: 1px solid #e9e9e9;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    max-height: 1000px;
+    overflow: hidden;
+    position: relative;
+    will-change: max-height, padding, opacity;
+  }
+}
+
+// Animation for accordion (enhanced)
+.accordion-enter-active {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-height: 1000px;
+  animation: accordionEnter 0.5s forwards;
+}
+
+.accordion-leave-active {
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  max-height: 1000px;
+  animation: accordionLeave 0.4s forwards;
+}
+
+.accordion-enter-from {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.accordion-leave-to {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// Custom animations for accordion
+@keyframes accordionEnter {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+  100% {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accordionLeave {
+  0% {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 0.8;
+    max-height: 500px;
+  }
+  75% {
+    opacity: 0.2;
+    max-height: 100px;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// Tabs animation
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Global animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
