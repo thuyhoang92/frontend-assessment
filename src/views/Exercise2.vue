@@ -54,23 +54,6 @@
         </transition>
       </div>
     </div>
-    
-    <!-- Bonus: Explanation of JavaScript quirk -->
-    <div class="mt-12 p-6 bg-gray-50 rounded-lg shadow-sm">
-      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Bonus Explanation</h2>
-      <p class="mb-4">Why is the result of <code class="bg-gray-200 px-2 py-1 rounded text-sm font-mono">('b' + 'a' + + 'a' + 'a').toLowerCase()</code> "banana"?</p>
-      <div class="mt-4">
-        <p class="mb-2">This expression evaluates to "banana" because:</p>
-        <ol class="ml-6 mb-4 list-decimal">
-          <li class="mb-2 transition-transform duration-200 hover:translate-x-1">'b' + 'a' = "ba" (string concatenation)</li>
-          <li class="mb-2 transition-transform duration-200 hover:translate-x-1">+ 'a' = NaN (the unary plus operator tries to convert 'a' to a number but fails, resulting in NaN)</li>
-          <li class="mb-2 transition-transform duration-200 hover:translate-x-1">"ba" + NaN = "baNaN" (NaN is coerced to the string "NaN")</li>
-          <li class="mb-2 transition-transform duration-200 hover:translate-x-1">"baNaN" + 'a' = "baNaNa" (string concatenation)</li>
-          <li class="mb-2 transition-transform duration-200 hover:translate-x-1">"baNaNa".toLowerCase() = "banana" (converts to lowercase)</li>
-        </ol>
-        <p>It's a quirky result due to JavaScript's type coercion and the way the unary plus operator works!</p>
-      </div>
-    </div>
   </div>
 </template>
 

@@ -121,18 +121,6 @@
 }
 
 // Animation for accordion (enhanced)
-.accordion-enter-active {
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  max-height: 1000px;
-  animation: accordionEnter 0.5s forwards;
-}
-
-.accordion-leave-active {
-  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  max-height: 1000px;
-  animation: accordionLeave 0.4s forwards;
-}
-
 .accordion-enter-from {
   max-height: 0;
   opacity: 0;
@@ -145,47 +133,6 @@
   opacity: 0;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-// Custom animations for accordion
-@keyframes accordionEnter {
-  0% {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(-5px);
-  }
-  100% {
-    max-height: 1000px;
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes accordionLeave {
-  0% {
-    max-height: 1000px;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  25% {
-    opacity: 0.8;
-    max-height: 500px;
-  }
-  75% {
-    opacity: 0.2;
-    max-height: 100px;
-  }
-  100% {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
 
 // Tabs animation

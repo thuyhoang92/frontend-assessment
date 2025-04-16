@@ -37,12 +37,12 @@ npm run dev
 yarn dev
 ```
 
-4. The application should now be running at `http://localhost:5173`
+4. The application should now be running at [http://localhost:5173](http://localhost:5173)
 
 ## URLs
-- Home page: `http://localhost:5173/`
-- Exercise 1: `http://localhost:5173/exercise1`
-- Exercise 2: `http://localhost:5173/exercise2`
+- Home page: [http://localhost:5173/](http://localhost:5173/)
+- Exercise 1: [http://localhost:5173/exercise1](http://localhost:5173/exercise1)
+- Exercise 2: [http://localhost:5173/exercise2](http://localhost:5173/exercise2)
 
 ## Project Structure
 - `/src` - Main source code
@@ -68,3 +68,17 @@ yarn dev
 The application uses a mobile-first approach with breakpoints at:
 - Mobile: < 768px (accordion view in Exercise 2)
 - Desktop: ≥ 768px (tabs view in Exercise 2)
+
+## Bonus: JavaScript Quirk Explanation
+
+Why is the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` "banana"?
+
+This expression evaluates to "banana" because:
+
+1. 'b' + 'a' = "ba" (string concatenation)
+2. + 'a' = NaN (the unary plus operator tries to convert 'a' to a number but fails, resulting in NaN)
+3. "ba" + NaN = "baNaN" (NaN is coerced to the string "NaN")
+4. "baNaN" + 'a' = "baNaNa" (string concatenation)
+5. "baNaNa".toLowerCase() = "banana" (converts to lowercase)
+
+It's a quirky result due to JavaScript's type coercion and the way the unary plus operator works!
