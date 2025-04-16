@@ -48,6 +48,7 @@ yarn dev
 - `/src` - Main source code
   - `/assets` - CSS and image assets
   - `/views` - Vue components for each page
+  - `/components` - Reusable Vue components
 - `/data.json` - Data source for Exercise 2
 
 ## Features
@@ -76,7 +77,7 @@ Why is the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` "banana"?
 This expression evaluates to "banana" because:
 
 1. 'b' + 'a' = "ba" (string concatenation)
-2. + 'a' = NaN (the unary plus operator tries to convert 'a' to a number but fails, resulting in NaN)
+2. The unary plus operator (+ 'a') = NaN (tries to convert 'a' to a number but fails, resulting in NaN)
 3. "ba" + NaN = "baNaN" (NaN is coerced to the string "NaN")
 4. "baNaN" + 'a' = "baNaNa" (string concatenation)
 5. "baNaNa".toLowerCase() = "banana" (converts to lowercase)
