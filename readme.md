@@ -13,7 +13,7 @@ This project is a Vue.js application that includes two main exercises:
 ## Setup Instructions
 
 ### Prerequisites
-- Node.js (v14 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
