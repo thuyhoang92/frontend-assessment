@@ -5,6 +5,10 @@ This project is a Vue.js application that includes two main exercises:
 1. A responsive page implementation based on designs
 2. A tabs and accordion component that displays content from a JSON file
 
+## Live Deployment
+The project is deployed and can be accessed at:
+- [https://hoangn-a2y.pages.dev/](https://hoangn-a2y.pages.dev/)
+
 ## Technology Stack
 - Vue.js 3
 - Tailwind CSS
@@ -43,6 +47,11 @@ yarn dev
 - Home page: [http://localhost:5173/](http://localhost:5173/)
 - Exercise 1: [http://localhost:5173/exercise1](http://localhost:5173/exercise1)
 - Exercise 2: [http://localhost:5173/exercise2](http://localhost:5173/exercise2)
+
+### Deployed URLs
+- Home page: [https://hoangn-a2y.pages.dev/](https://hoangn-a2y.pages.dev/)
+- Exercise 1: [https://hoangn-a2y.pages.dev/exercise1](https://hoangn-a2y.pages.dev/exercise1)
+- Exercise 2: [https://hoangn-a2y.pages.dev/exercise2](https://hoangn-a2y.pages.dev/exercise2)
 
 ## Project Structure
 - `/src` - Main source code

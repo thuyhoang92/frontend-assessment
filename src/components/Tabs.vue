@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs bg-white rounded-lg shadow-md overflow-hidden px-4">
+  <div class="tabs bg-white rounded-lg shadow-md overflow-hidden md:mx-6">
     <div class="tabs__header">
       <div
         v-for="(item, index) in items"

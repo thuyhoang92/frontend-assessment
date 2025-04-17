@@ -7,10 +7,10 @@
       <p class="text-xl text-[#7f8c8d]">Welcome to the frontend assessment exercises</p>
     </div>
 
-    <div class="flex flex-wrap gap-8 justify-center mt-8 md:flex-row flex-col items-center">
+    <div class="flex flex-wrap gap-8 justify-center mt-8 md:flex-row flex-col items-stretch">
       <div
-        class="flex-1 min-w-[300px] max-w-[450px] w-full bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
-        <router-link to="/exercise1" class="flex p-8 text-inherit no-underline h-full">
+        class="flex-1 min-w-[300px] max-w-[450px] w-full bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg flex">
+        <router-link to="/exercise1" class="flex p-8 text-inherit no-underline w-full">
           <div class="flex-shrink-0 w-[60px] h-[60px] bg-[#f0f5ff] rounded-xl flex items-center justify-center mr-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-[30px] h-[30px] text-[#4a90e2]">
@@ -25,8 +25,8 @@
       </div>
 
       <div
-        class="flex-1 min-w-[300px] max-w-[450px] w-full bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
-        <router-link to="/exercise2" class="flex p-8 text-inherit no-underline h-full">
+        class="flex-1 min-w-[300px] max-w-[450px] w-full bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg flex">
+        <router-link to="/exercise2" class="flex p-8 text-inherit no-underline w-full">
           <div class="flex-shrink-0 w-[60px] h-[60px] bg-[#f0f5ff] rounded-xl flex items-center justify-center mr-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-[30px] h-[30px] text-[#4a90e2]">
